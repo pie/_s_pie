@@ -10,9 +10,13 @@
 namespace PIE\_S;
 
 /**
- * Include setup.
+ * Include definitions for this theme.
  */
 require_once get_template_directory() . '/definitions.php';
+
+/**
+ * Load in the local version of ACF
+ */
 require_once ACF_PATH . 'acf.php';
 require_once get_template_directory() . '/setup/theme.php';
 require_once get_template_directory() . '/setup/enqueues.php';
