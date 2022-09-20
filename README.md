@@ -52,22 +52,7 @@ $ composer install
 $ npm install
 ```
 
-If you wish to include ACF Pro as a composer dependency, you may do so by copying `.env.example` to `.env`, adding your licence key and then adding the following to the repositories node in `composer.json`:
-
-```json
-{
-    "type": "package",
-    "package": {
-        "name": "advanced-custom-fields/advanced-custom-fields-pro",
-        "version": "5.12.2",
-        "type": "library",
-        "dist": {
-            "type": "zip",
-            "url": "https://connect.advancedcustomfields.com/index.php?a=download&p=pro&k={%ACF_PRO_KEY}"
-        }
-    }
-}
-```
+Copy `.env.example` to `.env`, adding your ACF Pro licence key
 
 If you wish to use `yarn deploy` to move your files to a remote server, make sure that you add the appropriate credentials and paths to the script in `package.json`.
 
