@@ -39,6 +39,7 @@ Clone or download this repository, change its name to something else (like, say,
 4. Search for <code>&nbsp;_s</code> (with a space before it) to capture DocBlocks and replace with: <code>&nbsp;Megatherium_is_Awesome</code>.
 5. Search for `_s-` to capture prefixed handles and replace with: `megatherium-is-awesome-`.
 6. Search for `_S_` (in uppercase) to capture constants and replace with: `MEGATHERIUM_IS_AWESOME_`.
+6. Search for `\_S` (in uppercase) to capture namespaces and replace with: `\MegatheriumIsAwesome`.
 
 Then, update the stylesheet header in `style.css`, the links in `footer.php` with your own information and rename `_s.pot` from `languages` folder to use the theme's slug. Next, update or delete this readme.
 
@@ -67,6 +68,8 @@ If you wish to include ACF Pro as a composer dependency, you may do so by copyin
     }
 }
 ```
+
+If you wish to use `yarn deploy` to move your files to a remote server, make sure that you add the appropriate credentials and paths to the script in `package.json`.
 
 ### Available CLI commands
 

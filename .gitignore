@@ -6,3 +6,4 @@ composer.lock
 style.css.map
 .DS_Store
 .env
+intelephense-error-fix.php

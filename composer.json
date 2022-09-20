@@ -15,14 +15,32 @@
         }
     ],
     "require": {
-        "php": ">=5.6"
+        "php": ">=8.0",
+        "advanced-custom-fields/advanced-custom-fields-pro": "^5.12"
     },
     "require-dev": {
         "dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
         "wptrt/wpthemereview": "^0.2.1",
         "php-parallel-lint/php-parallel-lint": "^1.2.0",
-        "wp-cli/i18n-command": "^2.2.5"
+        "wp-cli/i18n-command": "^2.2.5",
+        "paulthewalton/acf-stubs": "^5.8",
+        "composer/installers": "^2.2",
+        "ffraenz/private-composer-installer": "^5.0"
     },
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "advanced-custom-fields/advanced-custom-fields-pro",
+                "version": "5.12.2",
+                "type": "library",
+                "dist": {
+                    "type": "zip",
+                    "url": "https://connect.advancedcustomfields.com/index.php?a=download&p=pro&k={%ACF_PRO_KEY}"
+                }
+            }
+        }
+    ],
     "scripts": {
         "lint:wpcs": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs",
         "lint:php": "@php ./vendor/bin/parallel-lint --exclude .git --exclude vendor .",
@@ -34,7 +52,9 @@
     },
     "config": {
         "allow-plugins": {
-            "dealerdirect/phpcodesniffer-composer-installer": true
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "composer/installers": true,
+            "ffraenz/private-composer-installer": true
         }
     }
 }
