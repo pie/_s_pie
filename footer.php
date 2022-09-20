@@ -5,7 +5,8 @@
  * Contains the closing of the #content div and all content after.
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
+ * @todo figure out why this file cannot be moved into /template-parts but sidebar.php can...
+ * 
  * @package _s
  */
 
@@ -16,7 +17,7 @@
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', '_s' ) ); ?>">
 				<?php
 				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', '_s' ), 'WordPress' );
+				printf( esc_html__( 'Proudly powered by %s', '_s' ), 'WordPress and PIE' );
 				?>
 			</a>
 			<span class="sep"> | </span>

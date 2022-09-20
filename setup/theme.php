@@ -42,6 +42,7 @@ function map_template_paths( $template ) {
 	if ( false === strpos( $template, 'templates/' ) ) {
 		$template = 'templates/' . $template;
 	}
+	var_dump( $template );
 	return $template;
 }
 
