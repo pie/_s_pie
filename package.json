@@ -36,6 +36,8 @@
     "map": false
   },
   "scripts": {
+    "deploy": "rsync -avP --no-perms --no-times --exclude-from='deployment-exclusions.txt' ./* user@server:~/path/to/your/theme",
+    "build": "npm run compile:css && npm run compile:rtl",
     "watch": "node-sass sass/ -o ./ --source-map true --output-style expanded --indent-type tab --indent-width 1 -w",
     "compile:css": "node-sass sass/ -o ./ && stylelint '*.css' --fix || true && stylelint '*.css' --fix",
     "compile:rtl": "rtlcss style.css style-rtl.css",

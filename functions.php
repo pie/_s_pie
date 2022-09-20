@@ -7,9 +7,15 @@
  * @package _s
  */
 
+ if( !function_exists('get_plugin_data') ){
+    require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+}
+
+$plugin_data = get_plugin_data( __FILE__ );
+
 if ( ! defined( '_S_VERSION' ) ) {
-	// Replace the version number of the theme on each release.
-	define( '_S_VERSION', '1.0.0' );
+	// Generate the theme version from that defined in style.css.
+	define( '_S_VERSION', $plugin_data['Version'] );
 }
 
 /**

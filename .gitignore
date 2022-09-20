@@ -1,6 +1,8 @@
 /node_modules
 /vendor
 package-lock.json
+yarn.lock
 composer.lock
 style.css.map
 .DS_Store
+.env

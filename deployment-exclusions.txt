@@ -1,0 +1,16 @@
+webpack.config.js
+node_modules
+.git
+.gitignore
+src
+composer.lock
+composer.json
+yarn.lock
+yarn-error.log
+sql
+package.lock
+package.json
+phpcs.xml.dist
+.stylelintrc.json
+.eslintrc
+.github

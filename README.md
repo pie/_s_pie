@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/Automattic/_s)
 
-_s
+_s_starter
 ===
 
 Hi. I'm a starter theme called `_s`, or `underscores`, if you like. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
@@ -24,7 +24,7 @@ Installation
 
 ### Requirements
 
-`_s` requires the following dependencies:
+`_s_starter` requires the following dependencies:
 
 - [Node.js](https://nodejs.org/)
 - [Composer](https://getcomposer.org/)
@@ -44,25 +44,44 @@ Then, update the stylesheet header in `style.css`, the links in `footer.php` wit
 
 ### Setup
 
-To start using all the tools that come with `_s`  you need to install the necessary Node.js and Composer dependencies :
+To start using all the tools that come with `_s_starter`  you need to install the necessary Node.js and Composer dependencies :
 
 ```sh
 $ composer install
 $ npm install
 ```
 
+If you wish to include ACF Pro as a composer dependency, you may do so by copying `.env.example` to `.env`, adding your licence key and then adding the following to the repositories node in `composer.json`:
+
+```json
+{
+    "type": "package",
+    "package": {
+        "name": "advanced-custom-fields/advanced-custom-fields-pro",
+        "version": "5.12.2",
+        "type": "library",
+        "dist": {
+            "type": "zip",
+            "url": "https://connect.advancedcustomfields.com/index.php?a=download&p=pro&k={%ACF_PRO_KEY}"
+        }
+    }
+}
+```
+
 ### Available CLI commands
 
-`_s` comes packed with CLI commands tailored for WordPress theme development :
+`_s_starter` comes packed with CLI commands tailored for WordPress theme development :
 
+- `yarn watch` : watches all SASS files and recompiles them to css when they change.
+- `yarn build` : compiles all SASS files ready for production.
+- `yarn deploy` : deploys files to a server (will need access credntials and path set within package.json).
 - `composer lint:wpcs` : checks all PHP files against [PHP Coding Standards](https://developer.wordpress.org/coding-standards/wordpress-coding-standards/php/).
 - `composer lint:php` : checks all PHP files for syntax errors.
 - `composer make-pot` : generates a .pot file in the `languages/` directory.
-- `npm run compile:css` : compiles SASS files to css.
-- `npm run compile:rtl` : generates an RTL stylesheet.
-- `npm run watch` : watches all SASS files and recompiles them to css when they change.
-- `npm run lint:scss` : checks all SASS files against [CSS Coding Standards](https://developer.wordpress.org/coding-standards/wordpress-coding-standards/css/).
-- `npm run lint:js` : checks all JavaScript files against [JavaScript Coding Standards](https://developer.wordpress.org/coding-standards/wordpress-coding-standards/javascript/).
+- `yarn compile:css` : compiles SASS files to css.
+- `yarn compile:rtl` : generates an RTL stylesheet.
+- `yarn lint:scss` : checks all SASS files against [CSS Coding Standards](https://developer.wordpress.org/coding-standards/wordpress-coding-standards/css/).
+- `yarn lint:js` : checks all JavaScript files against [JavaScript Coding Standards](https://developer.wordpress.org/coding-standards/wordpress-coding-standards/javascript/).
 - `npm run bundle` : generates a .zip archive for distribution, excluding development and system files.
 
 Now you're ready to go! The next step is easy to say, but harder to do: make an awesome WordPress theme. :)
