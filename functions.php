@@ -18,6 +18,7 @@ require_once get_template_directory() . '/definitions.php';
  * Load in the local version of ACF
  */
 require_once ACF_PATH . 'acf.php';
+
 require_once SETUP_PATH . 'theme.php';
 require_once SETUP_PATH . 'enqueues.php';
 require_once SETUP_PATH . 'api.php';
