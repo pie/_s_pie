@@ -16,7 +16,7 @@ if ( ! defined( __NAMESPACE__ . '\VERSION' ) ) {
 define( __NAMESPACE__ . '\THEME_URI', get_stylesheet_directory_uri() . '/' );
 define( __NAMESPACE__ . '\ASSETS_URI', THEME_URI . 'assets/' );
 define( __NAMESPACE__ . '\THEME_PATH', get_stylesheet_directory() . '/' );
-define( __NAMESPACE__ . '\INCLUDE_PATH', THEME_PATH . 'includes/' );
+define( __NAMESPACE__ . '\SETUP_PATH', THEME_PATH . 'setup/' );
 define( __NAMESPACE__ . '\ASSETS_PATH', THEME_PATH . 'assets/' );
 
 // Define path and URL to the ACF plugin.
