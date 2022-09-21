@@ -22,7 +22,7 @@ jobs:
           php-version: 8.0
       - name: Install composer packages
       - run: |
-              echo "ACF_PRO_KEY=${{ secrets.ACF_PRO_KEY }}" > .env |
+              echo "ACF_PRO_KEY=${{ secrets.ACF_PRO_KEY }}" > .env
               composer install --no-progress
       - name: Check for PHP errors
         run: composer lint:php
@@ -40,7 +40,7 @@ jobs:
           php-version: 8.0
       - name: Install composer packages
       - run: |
-              echo "ACF_PRO_KEY=${{ secrets.ACF_PRO_KEY }}" > .env |
+              echo "ACF_PRO_KEY=${{ secrets.ACF_PRO_KEY }}" > .env
               composer install --no-progress
       - name: Check coding standards using PHPCS
         run: composer lint:wpcs
