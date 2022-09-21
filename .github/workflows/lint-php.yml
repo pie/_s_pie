@@ -19,7 +19,7 @@ jobs:
       - name: PHP setup
         uses: shivammathur/setup-php@v2
         with:
-          php-version: 7.4
+          php-version: 8.0
       - name: Install composer packages
         run: composer install --no-progress
       - name: Check for PHP errors
@@ -35,7 +35,7 @@ jobs:
       - name: PHP setup
         uses: shivammathur/setup-php@v2
         with:
-          php-version: 7.4
+          php-version: 8.0
       - name: Install composer packages
         run: composer install --no-progress
       - name: Check coding standards using PHPCS
