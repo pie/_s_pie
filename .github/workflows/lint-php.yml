@@ -21,7 +21,7 @@ jobs:
         with:
           php-version: 8.0
       - name: Install composer packages
-      - run: |
+        run: |
               echo "ACF_PRO_KEY=${{ secrets.ACF_PRO_KEY }}" > .env
               composer install --no-progress
       - name: Check for PHP errors
@@ -39,7 +39,7 @@ jobs:
         with:
           php-version: 8.0
       - name: Install composer packages
-      - run: |
+        run: |
               echo "ACF_PRO_KEY=${{ secrets.ACF_PRO_KEY }}" > .env
               composer install --no-progress
       - name: Check coding standards using PHPCS
