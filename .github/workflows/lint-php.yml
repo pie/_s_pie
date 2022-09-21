@@ -39,7 +39,6 @@ jobs:
       - uses: ramsey/composer-install@v2
         with:
           dependency-versions: "locked"
-        with:
           php-version: 8.0
       - name: Install composer packages
         run: composer install --no-progress
