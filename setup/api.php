@@ -1,12 +1,5 @@
 <?php 
 namespace PIE\_S\Setup\Api;
-/**
- * Register the /wp-json/acf/v3/posts endpoint so it will be cached.
- */
-
-
-require_once( 'media-gallery/gallery.php');
-require_once( 'media-gallery/like-nonce.php');
 
 /**
  * Cached endpoints which depend upon WP Rest Cache plugin being installed https://wordpress.org/plugins/wp-rest-cache/
