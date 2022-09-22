@@ -22,6 +22,7 @@ require_once ACF_PATH . 'acf.php';
 require_once SETUP_PATH . 'theme.php';
 require_once SETUP_PATH . 'enqueues.php';
 require_once SETUP_PATH . 'api.php';
+require_once SETUP_PATH . 'spa.php';
 
 /**
  * Implement the Custom Header feature.
