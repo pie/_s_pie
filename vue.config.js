@@ -9,6 +9,12 @@ module.exports = defineConfig({
     config.entry( 'navigation' )
         .add( './src/js/navigation.js' )
         .end()
+    config.entry( 'theme' )
+            .add( './src/sass/theme.scss' )
+            .end()
+            config.entry( 'woocommerce' )
+                .add( './src/sass/woocommerce.scss' )
+                .end()
     config.plugin( 'html' )
       .tap( ( args ) => {
         // eslint-disable-next-line no-param-reassign

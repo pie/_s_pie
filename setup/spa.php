@@ -54,6 +54,7 @@ function maybe_overload_nextgen_template( $template ){
   // If the current template is in the template_overrides array, then we serve up the
   // nextgen index file
   if ( in_array( $template_file, $template_overrides ) ) {
+    show_admin_bar(false);
     return get_stylesheet_directory() . '/dist/index.php';
   }
 
