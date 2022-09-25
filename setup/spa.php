@@ -47,7 +47,7 @@ function nextgen_rollout(){
 function maybe_overload_nextgen_template( $template ){
 
   // These template files have been tested and approved and will be served to all users
-  $template_overrides      = [];
+  $template_overrides      = ['404.php'];
 
   $template_file           = end(explode( '/', $template ));
 

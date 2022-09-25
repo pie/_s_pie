@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html  <?php language_attributes(); ?>>
+<head>
+  <meta charset="<?php bloginfo( 'charset' ); ?>">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+  <link rel="profile" href="https://gmpg.org/xfn/11">
+  <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body  <?php body_class(); ?> >
+  <?php wp_body_open(); ?>
+  <noscript>
+    <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+  </noscript>
+  <div id="app"></div>
+  <!-- built files will be auto injected -->
+  <!-- <script>  window.nextgenThemeData = <?php echo \PIE\AMATheme\Includes\Nextgen\get_app_data('json'); ?> </script> -->
+  </body>
+  </html>
