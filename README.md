@@ -1,15 +1,13 @@
-[![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/Automattic/_s)
-
-_s_starter
+_s_pie
 ===
 
-Hi. I'm a starter theme called `_s`, or `underscores`, if you like. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
-
-My ultra-minimal CSS might make me look like theme tartare but that means less stuff to get in your way when you're designing your awesome theme. Here are some of the other more interesting things you'll find here:
+This is a starter theme forked from `_s`, or `underscores`, adapted to include some setup for a hybrid SPA/WP theme built with Vue.js. My ultra-minimal CSS might make me look like theme tartare but that means less stuff to get in your way when you're designing your awesome theme. Here are some of the other more interesting things you'll find here:
 
 * A modern workflow with a pre-made command-line interface to turn your project into a more pleasant experience.
 * A just right amount of lean, well-commented, modern, HTML5 templates.
-* A custom header implementation in `inc/custom-header.php`. Just add the code snippet found in the comments of `inc/custom-header.php` to your `header.php` template.
+* Page templates moved from the theme root into the `templates` directory.
+* Template parts, including header, fooer and sidebar, moved into the `template-parts` directory.
+* A custom header implementation in `inc/custom-header.php`. Just add the code snippet found in the comments of `inc/custom-header.php` to your `header.php` template part.
 * Custom template tags in `inc/template-tags.php` that keep your templates clean and neat and prevent code duplication.
 * Some small tweaks in `inc/template-functions.php` that can improve your theming experience.
 * A script at `js/navigation.js` that makes your menu a toggled dropdown on small screens (like your phone), ready for CSS artistry. It's enqueued in `functions.php`.
@@ -41,15 +39,15 @@ Clone or download this repository, change its name to something else (like, say,
 6. Search for `_S_` (in uppercase) to capture constants and replace with: `MEGATHERIUM_IS_AWESOME_`.
 6. Search for `\_S` (in uppercase) to capture namespaces and replace with: `\MegatheriumIsAwesome`.
 
-Then, update the stylesheet header in `style.css`, the links in `footer.php` with your own information and rename `_s.pot` from `languages` folder to use the theme's slug. Next, update or delete this readme.
+Then, update the stylesheet header in `style.css`, the links in `template-parts/footer.php` with your own information and rename `_s.pot` from `languages` folder to use the theme's slug. Next, update or delete this readme.
 
 ### Setup
 
-To start using all the tools that come with `_s_starter`  you need to install the necessary Node.js and Composer dependencies :
+To start using all the tools that come with `_s_pie`  you need to install the necessary Node.js and Composer dependencies :
 
 ```sh
 $ composer install
-$ npm install
+$ yarn install
 ```
 
 Copy `.env.example` to `.env`, adding your ACF Pro licence key
@@ -63,14 +61,8 @@ If you wish to use `yarn deploy` to move your files to a remote server, make sur
 - `yarn watch` : watches all SASS files and recompiles them to css when they change.
 - `yarn build` : compiles all SASS files ready for production.
 - `yarn deploy` : deploys files to a server (will need access credntials and path set within package.json).
-- `composer lint:wpcs` : checks all PHP files against [PHP Coding Standards](https://developer.wordpress.org/coding-standards/wordpress-coding-standards/php/).
-- `composer lint:php` : checks all PHP files for syntax errors.
 - `composer make-pot` : generates a .pot file in the `languages/` directory.
-- `yarn compile:css` : compiles SASS files to css.
-- `yarn compile:rtl` : generates an RTL stylesheet.
-- `yarn lint:scss` : checks all SASS files against [CSS Coding Standards](https://developer.wordpress.org/coding-standards/wordpress-coding-standards/css/).
-- `yarn lint:js` : checks all JavaScript files against [JavaScript Coding Standards](https://developer.wordpress.org/coding-standards/wordpress-coding-standards/javascript/).
-- `npm run bundle` : generates a .zip archive for distribution, excluding development and system files.
+- `yarn v-lint` : checks all SASS and JS files against [CSS Coding Standards](https://developer.wordpress.org/coding-standards/wordpress-coding-standards/).
 
 Now you're ready to go! The next step is easy to say, but harder to do: make an awesome WordPress theme. :)
 
