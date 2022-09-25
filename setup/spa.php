@@ -60,33 +60,30 @@ function maybe_overload_nextgen_template( $template ){
   return $template;
 }
 
-
+/**
+ * returns either a PHP or JSON version of the data required by the SPA
+ *
+ * @param string $format
+ * @return void
+ */
 function get_app_data( $format = 'php' ) {
-  $app_data                 = [
-    'nonce' => wp_create_nonce('wp_rest');
+
+    $appdata = get_transient( __NAMESPACE__ . '\appdata' );
+    if ( ! $appdata ) {
+
+        // perform functoins to populate app data - this will be echoed into the body of your app index.php
+        $appdata = []; 
+        set_transient( __NAMESPACE__ . '\appdata', $appdata, 600 );
+    }
+
+
+  $appdata = [
+    'nonce' => wp_create_nonce('wp_rest')
   ];
-  $app_data['nonce']        = ;
-  $appdata                 = array_merge( $appdata, get_appdata() );
-
   switch ( $format ) {
-
     case 'json':
       return json_encode( $appdata );
-
     default:
       return $appdata;
-
   }
-
-  return $appdata;
-}
-
-function get_appdata() {
-  $appdata = get_transient( __NAMESPACE__ . '\appdata' );
-  if ( ! $appdata ) {
-   
-    set_transient( __NAMESPACE__ . '\appdata', $appdata, 600 );
-  }
-
-  return $appdata;
 }

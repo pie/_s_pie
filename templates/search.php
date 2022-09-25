@@ -7,7 +7,7 @@
  * @package _s
  */
 
-get_header();
+get_template_part('template-parts/header');
 ?>
 
 	<main id="primary" class="site-main">
@@ -49,5 +49,5 @@ get_header();
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
-get_footer();
+get_template_part('template-parts/sidebar');
+get_template_part('template-parts/footer');
