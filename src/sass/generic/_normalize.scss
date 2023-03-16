@@ -4,11 +4,13 @@
 	 ========================================================================== */
 
 /**
+ * 0. Set 1rem to 10px
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 
 html {
+	font-size: 10px;
 	line-height: 1.15;
 	-webkit-text-size-adjust: 100%;
 }
